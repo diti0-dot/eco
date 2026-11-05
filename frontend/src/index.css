@@ -1,0 +1,105 @@
+:root {
+  --green: #2e7d4f;
+  --text: #1d2b22;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: #f5faf7;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px; padding: 12px 20px;
+  background: var(--green); color: white;
+}
+.topbar a, .topbar button {
+  color: white; background: none; border: 0; cursor: pointer;
+  font-size: 15px; text-decoration: none; margin-left: 14px;
+}
+.topbar .brand { font-weight: 700; font-size: 18px; margin-left: 0; }
+.topbar .btn-light { color: var(--green); }
+
+.banner { background: var(--green); color: white; text-align: center; padding: 70px 20px; }
+.banner p { max-width: 620px; margin: 12px auto 24px; line-height: 1.5; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.narrow { max-width: 460px; }
+
+.card { background: white; border: 1px solid #d6e7dc; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.request { border-top: 1px solid #eef4f0; padding: 12px 0; }
+.request:first-child { border-top: 0; }
+
+.btn, .btn-outline, .btn-light {
+  display: inline-block; padding: 9px 16px; border-radius: 8px; font-size: 15px;
+  border: 2px solid var(--green); cursor: pointer; text-decoration: none;
+}
+.btn { background: var(--green); color: white; }
+.btn-outline { background: white; color: var(--green); }
+.btn-light { background: white; color: var(--green); }
+.btn:disabled { opacity: .5; cursor: default; }
+
+input, select, textarea {
+  width: 100%; padding: 8px; margin: 4px 0; border: 1px solid #b9d2c2;
+  border-radius: 6px; font: inherit;
+}
+.row input, .row select { width: auto; }
+label { display: block; font-size: 14px; margin-bottom: 8px; }
+.check { display: inline-flex; align-items: center; gap: 6px; }
+.check input { width: auto; margin: 0; }
+
+.search { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; align-items: end; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 6px 0; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.tabs { display: flex; gap: 8px; margin: 16px 0; }
+
+.badge { padding: 3px 9px; border-radius: 999px; font-size: 12px; background: #eee; }
+.badge.approved { background: #d4f1de; }
+.badge.rejected { background: #fbd5d5; }
+.badge.pending, .badge.need_edits { background: #fff1c2; }
+
+.grade {
+  display: inline-block; width: 30px; height: 30px; line-height: 30px;
+  text-align: center; border-radius: 50%; color: white; font-weight: 700;
+}
+.grade-A { background: #2e7d4f; }
+.grade-B { background: #6aa84f; }
+.grade-C { background: #d6a100; }
+.grade-D { background: #e69138; }
+.grade-E { background: #cc0000; }
+
+.legs li { margin-bottom: 12px; }
+.docs { font-size: 14px; color: #3d5345; padding-left: 18px; }
+.muted { color: #6b7b70; font-size: 14px; }
+.note { background: #f1f7f3; padding: 8px 10px; border-radius: 6px; font-size: 14px; }
+.totals { font-weight: 600; }
+.todo { list-style: none; padding: 0; }
+.todo li { padding: 6px 0; }
+.todo .done { color: var(--green); }
+.todo .locked { color: #999; }
+.error { color: #b00020; }
+.ok { color: var(--green); }
+
+
+
+.doc-row { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.icon-btn {
+  background: none; border: 1px solid #b9d2c2; border-radius: 6px;
+  padding: 2px 7px; cursor: pointer; font-size: 13px; text-decoration: none;
+  color: var(--text);
+}
+.icon-btn:hover { background: #f1f7f3; }
+
+.badge.open { background: #d6e9ff; }
+.badge.awaiting_response { background: #fff1c2; }
+.badge.no_response_required { background: #eee; }
+.badge.closed { background: #d4f1de; }
+
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.table-wrap { overflow-x: auto; padding: 0; }
+table.tickets { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.tickets th, table.tickets td {
+  text-align: left; padding: 10px; border-bottom: 1px solid #eef4f0; vertical-align: top;
+}
+table.tickets th { background: #f1f7f3; white-space: nowrap; }
+table.tickets tr.selected td { background: #f5fbf7; }
